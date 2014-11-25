@@ -2,12 +2,12 @@
 import org.apache.commons.mail.*
 
 void sentMail(){
-    Email email = new SimpleEmail();
-    email.setHostName("smtp.sina.com");
-    email.setSmtpPort(25);
-    email.setAuthenticator(new DefaultAuthenticator("xzzxia", "xzz352107"));
+    def email = new SimpleEmail();
+    email.hostName = "smtp.sina.com";
+    //email.smtpPort(25);
+    email.authenticator = new DefaultAuthenticator("xzzxia", "xzz352107");
+    email.from = "xzzxia@sina.com";
     email.setSSLOnConnect(false);
-    email.setFrom("xzzxia@sina.com");
     email.setSubject("TestMail");
     email.setMsg("This is a test mail ... :-)");
     email.addTo("zhengzhou.xu@hotmail.com");
