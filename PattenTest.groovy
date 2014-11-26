@@ -1,7 +1,7 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PattenTest{
+public class GroovyPatten{
 	
 
     public void testPattenGroovy(){
@@ -24,4 +24,12 @@ public class PattenTest{
        	}
        	println formatText;
     }
+
+    void testHtml(){
+        def result = "afdsfas<dsfa>f<html><head>asdf</html>dfadsa" =~ /<html>.*<\/html>/
+        println result[0]
+    }
+
 }
+
+new GroovyPatten().testHtml()
